@@ -3,6 +3,6 @@ export class MealItem {
     public name: string,
     public calories: number,
     public notes: string,
-    public meal: string
+    public mealType: string // Breakfast, Lunch, Dinner, or Snack
   ) {}
 }
