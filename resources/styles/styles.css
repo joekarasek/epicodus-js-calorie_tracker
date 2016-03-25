@@ -4,3 +4,6 @@
 .radio_label {
   display: block;
 }
+.meal__selected>.well {
+  background-color: #BABAEF;
+}

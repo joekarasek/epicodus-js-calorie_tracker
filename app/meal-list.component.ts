@@ -11,24 +11,28 @@ import { MealItemComponent } from './meal-item.component';
   template:
     `
     <ul>
-      <li class="well"
-        *ngFor="#meal of meals">
-          <p><strong>{{ meal.name }}:</strong> {{ meal.calories }} calories</p>
-          <p>{{ meal.mealType }}
-          <p>{{ meal.notes }}</p>
-      </li>
+      <meal-item
+        *ngFor="#meal of meals"
+        [meal]="meal"
+        [class.meal__selected]="meal === selectedMeal"
+        (click)="selectMeal(meal)">
+      </meal-item>
     </ul>
 
     `
 })
 export class MealListComponent {
   public meals: MealItem[];
+  public selectedMeal: MealItem;
   // public onKegSelect: EventEmitter<Keg>;
   // public selectedKeg: Keg;
   // public filterLow: string = "none";
   // public filterType: string = "none";
   constructor() {
-    // this.onKegSelect = new EventEmitter();
+  }
+  selectMeal(clickedMeal: MealItem): void {
+    this.selectedMeal = clickedMeal;
+    // this.onKegSelect.emit(clickedKeg);
   }
   // refreshKeg(newKeg: Keg) {
   //   // console.log("event received and refreshKeg run");
