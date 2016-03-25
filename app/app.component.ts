@@ -1,17 +1,19 @@
 import { Component, EventEmitter } from 'angular2/core';
 import { MealItem } from './MealItem.model';
+import { MealListComponent } from './meal-list.component';
+
 
 @Component({
   selector: 'my-app',
   inputs: ['meals'],
+  directives: [MealListComponent],
   template: `
     <div class="container">
       <h1>Calorie Counter</h1>
       <div class="container">
-        <p>Hello world!</p>
-        <ul>
-          <li *ngFor="#meal of meals">{{ meal.name }}</li>
-        </ul>
+        <meal-list
+          [meals]="meals">
+        </meal-list>
       </div>
     </div>
   `
