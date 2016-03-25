@@ -1,3 +1,6 @@
 .well {
   display: inline-block;
 }
+.radio_label {
+  display: block;
+}
