@@ -14,6 +14,7 @@ import { MealItemComponent } from './meal-item.component';
       <meal-item
         *ngFor="#meal of meals"
         [meal]="meal"
+        [selectedMeal]="selectedMeal"
         [class.meal__selected]="meal === selectedMeal"
         (click)="selectMeal(meal)">
       </meal-item>

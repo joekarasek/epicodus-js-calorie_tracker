@@ -3,12 +3,12 @@ import { MealItem } from './MealItem.model';
 
 @Component({
     selector: 'meal-item',
-    inputs: ['meal'],
+    inputs: ['meal', 'selectedMeal'],
     template: `
     <li class="well">
-        <p><strong>{{ meal.name }}:</strong> {{ meal.calories }} calories</p>
-        <p>{{ meal.mealType }}
-        <p>{{ meal.notes }}</p>
+        <p><strong>{{ meal.name }}:</strong></p>
+        <p *ngIf="meal === selectedMeal">{{ meal.calories }} calories</p>
+        <p *ngIf="meal === selectedMeal">{{ meal.notes }}</p>
     </li>
     `
 })
