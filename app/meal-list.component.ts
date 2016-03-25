@@ -10,10 +10,11 @@ import { MealItem } from './MealItem.model';
   template:
     `
     <ul>
-      <li *ngFor="#meal of meals">
-        <p><strong>{{ meal.name }}:</strong> {{ meal.calories }} calories</p>
-        <p>{{ meal.mealType }}
-        <p>{{ meal.notes }}</p>
+      <li class="well"
+        *ngFor="#meal of meals">
+          <p><strong>{{ meal.name }}:</strong> {{ meal.calories }} calories</p>
+          <p>{{ meal.mealType }}
+          <p>{{ meal.notes }}</p>
       </li>
     </ul>
 
