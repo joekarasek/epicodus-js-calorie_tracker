@@ -1,5 +1,5 @@
 import { Component, EventEmitter } from 'angular2/core';
-import { MealItem } from './MealItem.model';
+import { MealItem } from './../../models/MealItem.model';
 
 @Component({
   selector: 'create-meal',
@@ -35,7 +35,7 @@ export class MealCreateComponent {
       mealCalories.value = "";
       mealNotes.value = "";
       // Emit new meal to app
-      this.onSubmitCreateMeal.emit(newMeal);      
+      this.onSubmitCreateMeal.emit(newMeal);
     }
   }
 }

@@ -1,0 +1,9 @@
+meal-item {
+  .well {
+    display: inline-block;
+  }
+}
+
+.meal__selected>.well {
+  background-color: #BABAEF;
+}

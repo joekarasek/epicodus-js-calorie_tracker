@@ -1,9 +1,14 @@
 node_modules/
 npm-debug.log
 bower_components/
-app/*.js
-app/*.js.map
 .DS_Store
 build/
 typings/
 temp.html
+
+app/components/*/*.js
+app/components/*/*.js.map
+app/models/*.js
+app/models/*.js.map
+app/*.js
+app/*.js.map
