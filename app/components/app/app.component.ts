@@ -1,14 +1,17 @@
-import { Component, EventEmitter } from 'angular2/core';
-import { MealItem } from './../../models/MealItem.model';
-import { MealListComponent } from './../meal-list/meal-list.component';
-import { MealCreateComponent } from './../meal-create/meal-create.component';
+import { Component } from 'angular2/core';
+import { MealItem } from '../../models/MealItem.model';
+import { MealListComponent } from '../meal-list/meal-list.component';
+import { MealCreateComponent } from '../meal-create/meal-create.component';
+import { NavBarComponent } from '../navbar/navbar.component';
 
 
 @Component({
   selector: 'my-app',
   inputs: ['meals'],
-  directives: [MealListComponent, MealCreateComponent],
+  directives: [MealListComponent, MealCreateComponent, NavBarComponent],
   template: `
+    <nav-bar>
+    </nav-bar>
     <div class="container">
       <h1>Calorie Counter</h1>
       <div class="container">
