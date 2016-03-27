@@ -43,6 +43,6 @@ export class AppComponent {
     ];
   }
   addNewMeal(newMeal: MealItem) {
-    this.meals.push(newMeal);
+    this.meals.unshift(newMeal);
   }
 }
