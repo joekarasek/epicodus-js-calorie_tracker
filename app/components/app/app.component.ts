@@ -9,19 +9,26 @@ import { NavBarComponent } from '../navbar/navbar.component';
   selector: 'my-app',
   inputs: ['meals'],
   directives: [MealListComponent, MealCreateComponent, NavBarComponent],
-  pipes: [],
   template: `
-    <nav-bar>
+    <nav-bar
+      (onNavBarClick)="setAppState($event)">
     </nav-bar>
     <div class="container">
       <h1>Calorie Counter</h1>
       <div class="container">
-
+        <div class="well well__start"
+          *ngIf="appState === 'start'">
+          <h1>Welcome to the Calorie Counter App</h1>
+          <p>Use the buttons on the right side of the navbar to create, view, and edit a list of things you've eaten.</p>
+          <p>This app was built using Angular2, a framework for building apps in Javascript.</p>
+        </div>
         <create-meal
-          (onSubmitCreateMeal)="addNewMeal($event)">
+          (onSubmitCreateMeal)="addNewMeal($event)"
+          *ngIf="appState === 'create'">
         </create-meal>
         <meal-list
-          [meals]="meals">
+          [meals]="meals"
+          *ngIf="appState === 'view'">
         </meal-list>
       </div>
     </div>
@@ -30,6 +37,7 @@ import { NavBarComponent } from '../navbar/navbar.component';
 
 export class AppComponent {
   public meals: MealItem[];
+  public appState: string = 'start';
   constructor(){
     this.meals = [
       new MealItem("French Fries", 350, "Delicious!"),
@@ -45,5 +53,8 @@ export class AppComponent {
   }
   addNewMeal(newMeal: MealItem) {
     this.meals.unshift(newMeal);
+  }
+  setAppState(newState: string) {
+    this.appState = newState;
   }
 }
