@@ -9,6 +9,7 @@ import { NavBarComponent } from '../navbar/navbar.component';
   selector: 'my-app',
   inputs: ['meals'],
   directives: [MealListComponent, MealCreateComponent, NavBarComponent],
+  pipes: [],
   template: `
     <nav-bar>
     </nav-bar>
