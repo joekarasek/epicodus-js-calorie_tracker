@@ -6,11 +6,11 @@ build/
 typings/
 temp.html
 
+app/*.js
+app/*.js.map
 app/components/*/*.js
 app/components/*/*.js.map
 app/models/*.js
 app/models/*.js.map
 app/pipes/*.js
 app/pipes/*.js.map
-app/*.js
-app/*.js.map

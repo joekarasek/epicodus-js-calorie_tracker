@@ -1,19 +1,27 @@
-# _Project Title_
+# _Calorie Counter App, Angular 2_
 
-#### _A simple template, 3.__.2016_
+#### _Code Review Week 2 of Epicodus Javascript, Angular 2 App, 3.19.2016_
 
-### By _**Joseph Karasek and **_
+### By _**Joseph Karasek**_
 
 ## Description
 
-_This web app is designed to ._
+_This web app is designed to track food intake by listing food items along with calories and notes about each food. A user can create a new entry, see a list of entries, see details for any given entry, and edit those details. The user can also filter the list of entries they are viewing. The app preloads a list of entries for demonstration purposes (no database connected). This app was built using the Angular 2 beta._
 
-_The goal of this project is to ._
+_The goal of this project is to show competency with node.js, gulp, dependency management, TypeScript, and Angular 2._
 
-_The project was put together using ._
+_The code will be reviewed with the following criteria:_
 
-
-## Setup/Installation
+* _Does the website work as expected?_
+* _Is the app structured in a logical way, including a model, multiple components and TypeScript syntax? Interfaces are not a requirement for this assignment._
+* _Does the app allow you to create and edit new instances of a model?_
+* _Does the app allow you to view a list of foods names and then see the other properties in a details view on click?_
+* _Does the app allow you to filter foods based on their calories?_
+* _Do you manage your build tool dependencies with npm?_
+* _Do you manage your front-end dependencies with Bower?_
+* _Does the app include a gulp-based asset pipeline with a development server? Does the asset pipeline include all tasks from the homework this week?_
+* _Does the code stick to standards from previous weeks? (Testing is not required this week.)_
+* _Are you able to discuss the flow of your code and the concepts behind it with an instructor using correct terminology?_
 
 #### System Requirements
 
@@ -22,27 +30,21 @@ _The project was put together using ._
 
 #### Installation
 
-* After cloning the repo, you will need to install dependencies...
+* You will need to install dependencies using npm and bower. From the root directory...
 
 
     npm install
     bower install
 
-* Gulp is used to handle both building the site and launching a server to host the site...
+* Gulp is used to handle both building the site and launching a server to host the site. From the root directory...
 
 
+    gulp build
     gulp serve
 
 ## Known Bugs
 
-_This application is not fully designed and may have unknown bugs._
-
-_The current gulpfile.js does not handle creation of a production version of the build (with minified js). Front-end dependencies will still be minified._
-
-## To Do (coming in future versions)
-
-1. [ ] No crash at errors during watch. Will log errors but not attempt a rebuild.
-2. [ ] Folder for organizing html files, gulp will build fresh html in the build folder.
+_No known bugs at this time._
 
 ## Support and contact details
 
@@ -50,6 +52,8 @@ _If you have any questions, concerns, or feedback, please contact the authors th
 
 ## Technologies Used
 
+* _This app was created with the [Angular 2 Beta](https://angular.io/)._
+* _This app was written in [TypeScript](http://www.typescriptlang.org/s)._
 * _This project was built on [Node.js](https://nodejs.org/en/)._
 * _Dependencies were handled with [npm](https://www.npmjs.com/) and [Bower](http://bower.io/)._
 * _[Gulp](http://gulpjs.com/) is an awesome asset pipeline used in this project._
