@@ -28,9 +28,14 @@ System.register(['angular2/core'], function(exports_1, context_1) {
                             return (meal.calories <= 300);
                         });
                     }
+                    else if (desiredCalorieFilter === "medium") {
+                        return input.filter(function (meal) {
+                            return (meal.calories > 300 && meal.calories <= 650);
+                        });
+                    }
                     else if (desiredCalorieFilter === "high") {
                         return input.filter(function (meal) {
-                            return (meal.calories > 300);
+                            return (meal.calories > 650);
                         });
                     }
                     else {

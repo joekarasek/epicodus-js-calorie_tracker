@@ -12,10 +12,12 @@ import { CaloriesPipe } from '../../pipes/calories.pipe';
     `
     <ul>
       <div class="mealList__filters">
-        <select (change)="filterCaloriesChange($event.target.value)" class="filter">
+        <h3>Filter results:</h3>
+        <select (change)="filterCaloriesChange($event.target.value)" multiple class="filter form-control">
           <option value="none" selected="selected">Show All</option>
           <option value="low">Low Calories (<300)</option>
-          <option value="high">High Calories (>300)</option>
+          <option value="medium">Medium Calories (300 to 650)</option>
+          <option value="high">High Calories (>650)</option>
         </select>
       </div>
       <meal-item
