@@ -14,7 +14,6 @@ import { NavBarComponent } from '../navbar/navbar.component';
       (onNavBarClick)="setAppState($event)">
     </nav-bar>
     <div class="container">
-      <h1>Calorie Counter</h1>
       <div class="container">
         <div class="well well__start"
           *ngIf="appState === 'start'">

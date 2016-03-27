@@ -1,0 +1,13 @@
+meal-list {
+  .mealList {
+    display: inline-block;
+    margin-left: auto;
+    width: 79%;
+    list-style-type: none;
+  }
+  .mealList__filters {
+    display: inline-block;
+    float: left;
+    width: 20%;
+  }
+}

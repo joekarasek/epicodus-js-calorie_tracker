@@ -7,6 +7,11 @@ nav-bar {
     font-weight: bold;
     text-decoration: underline;
     font-family: cursive;
+    background-color: $backgroundLight;
+    opacity: 0.4;
+    border-radius: 5px;
+    padding-left: 15px;
+    margin-top: 15px;
   }
   .navbar-btn , .btn {
     font-family: cursive;
