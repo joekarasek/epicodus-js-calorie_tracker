@@ -6,7 +6,7 @@ import { MealItem } from './../../models/MealItem.model';
     inputs: ['meal', 'selectedMeal'],
     template: `
     <li class="well">
-        <div *ngIf="!editable">
+        <div *ngIf="!editable || meal !== selectedMeal">
           <p><strong>{{ meal.name }}:</strong></p>
           <p *ngIf="meal === selectedMeal">Calories: {{ meal.calories }}</p>
           <p *ngIf="meal === selectedMeal">{{ meal.notes }}</p>
@@ -15,7 +15,7 @@ import { MealItem } from './../../models/MealItem.model';
               Edit Meal
           </button>
         </div>
-        <div *ngIf="editable">
+        <div *ngIf="editable && meal === selectedMeal">
           <p><strong>EDITING MODE</strong></p>
           <p *ngIf="meal === selectedMeal">Name: </p>
           <input [(ngModel)]="meal.name"/>
