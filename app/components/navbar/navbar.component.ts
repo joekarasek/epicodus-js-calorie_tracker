@@ -5,15 +5,15 @@ import { Component, EventEmitter } from 'angular2/core';
   outputs: ['onNavBarClick'],
   directives: [],
   template: `
-      <nav class="navbar navbar-default">
+      <nav class="navbar">
       <div class="container-fluid">
           <p class="navbar-brand">
             Calorie Counter
           </p>
-          <button type="button" class="btn btn-default navbar-btn navbar-right"
+          <button type="button" class="btn navbar-btn navbar-right"
             (click)="clickNavBar('create')">
           Add Meal</button>
-          <button type="button" class="btn btn-default navbar-btn navbar-right"
+          <button type="button" class="btn navbar-btn navbar-right"
             (click)="clickNavBar('view')">
           View Meals</button>
       </div>

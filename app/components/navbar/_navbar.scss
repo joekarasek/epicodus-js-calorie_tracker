@@ -1,0 +1,20 @@
+nav-bar {
+  .navbar {
+    background-color: $backgroundDark;
+  }
+  .navbar-brand {
+    font-size: 18pt;
+    font-weight: bold;
+    text-decoration: underline;
+    font-family: cursive;
+  }
+  .navbar-btn , .btn {
+    font-family: cursive;
+    font-weight: bold;
+    background-color: $backgroundLight;
+    border: solid black 2px;
+    border-radius: 4px;
+    box-shadow: 5px 5px 10px black;
+    margin: 20px 20px;;
+  }
+}
